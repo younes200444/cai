@@ -1,5 +1,5 @@
 /* Importation des couleurs globales */
-@import url('globals.css');
+@import url('global.css');
 
 /* Reset */
 * {
@@ -27,6 +27,10 @@ body {
 /* Header */
 header {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header h1 {
@@ -52,9 +56,9 @@ header h1 {
 }
 
 .card {
-    background-color: var(--card-bg-color);
+    background-color: white;
     border-radius: 10px;
-    padding: 15px;
+    padding: 42px 15px;
     box-shadow: 0 2px 5px var(--shadow-color);
     display: flex;
     flex-direction: column;
