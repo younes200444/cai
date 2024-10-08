@@ -4,72 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bouncing Ball with Sound</title>
+    <title>Funny Button</title>
     <style>
         body {
-            margin: 0;
-            overflow: hidden; /* Prevent scrollbars */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
         }
-        #ball {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: red;
+        #funnyButton {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
+        }
+        #funnyButton:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 
 <body>
-    <div id="ball" onclick="bounceBall()"></div>
-    <audio id="clickSound" src="click-sound.mp3" preload="auto"></audio> <!-- Add your sound file -->
+    <button id="funnyButton">Click Me!</button>
+    <audio id="funnySound" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
 
     <script>
-        function bounceBall() {
-            const ball = document.getElementById('ball');
-            const clickSound = document.getElementById('clickSound');
+        const button = document.getElementById('funnyButton');
+        const sound = document.getElementById('funnySound');
 
+        button.addEventListener('mouseover', () => {
             // Play sound
-            clickSound.play();
+            sound.currentTime = 0; // Reset sound to start
+            sound.play();
 
-            // Change color randomly
-            ball.style.backgroundColor = getRandomColor();
+            // Change position randomly
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.position = 'absolute';
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        });
 
-            // Get window dimensions
-            const windowWidth = window.innerWidth;
-            const windowHeight = window.innerHeight;
-
-            // Generate random position
-            const randomX = Math.random() * (windowWidth - ball.offsetWidth);
-            const randomY = Math.random() * (windowHeight - ball.offsetHeight);
-
-            // Move the ball to the new position
-            ball.style.left = `${randomX}px`;
-            ball.style.top = `${randomY}px`;
-
-            // Bounce effect
-            ball.animate([
-                { transform: 'translateY(0)' },
-                { transform: 'translateY(-20px)' },
-                { transform: 'translateY(0)' }
-            ], {
-                duration: 300,
-                easing: 'ease-in-out',
-                iterations: 1
-            });
-        }
-
-        function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
+        button.addEventListener('click', () => {
+            alert("You clicked me!");
+        });
     </script>
 </body>
 
