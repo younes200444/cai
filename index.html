@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hh {
+            position: absolute; /* Permet le positionnement aléatoire */
+            cursor: pointer; /* Change le curseur au survol */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="hh" onmouseover="moveRandomly()">la chditini aji hwini </h1>
+</body>
+
+</html>
+
+<script>
+function moveRandomly() {
+    const title = document.getElementById('hh');
+    // Obtenir la largeur et la hauteur de la fenêtre
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    // Générer des positions aléatoires
+    const randomX = Math.random() * (windowWidth - title.offsetWidth);
+    const randomY = Math.random() * (windowHeight - title.offsetHeight);
+
+    // Appliquer les nouvelles positions
+    title.style.left = `${randomX}px`;
+    title.style.top = `${randomY}px`;
+}
+</script>
