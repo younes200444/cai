@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendez-vous</title>
+    <link rel="stylesheet" href="../styles/reserve.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-bar">
+                <span class="back-arrow" onclick="history.back()">&#8592;</span>
+                <h1>Rendez-vous</h1>
+            </div>
+        </header>
+        <div class="doctor-card">
+            <img src="../img/doc.png" alt="Dr. Pediatrician">
+            <div class="doctor-info">
+                <h2>Dr. Pediatrician <span class="heart">❤️</span></h2>
+                <p class="speciality">dentiste</p>
+                <p class="rating">
+                    ⭐⭐⭐⭐☆ 
+                    <span class="price">$28.00/hr</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <label for="name">Rendez-vous pour</label>
+            <input type="text" id="name" placeholder="nom">
+            <input type="text" id="phone" placeholder="numéro de téléphone">
+        </div>
+
+        <div class="appointment-for">
+            <div class="add-option">
+                <div class="add-card">+</div>
+                <p>ajouter</p>
+            </div>
+            <div class="appointment-card">
+                <img src="../img/moi.png" alt="Moi">
+                <p>pour moi</p>
+            </div>
+            <div class="appointment-card">
+                <img src="../img/enfant.png" alt="Enfant">
+                <p>mon enfant</p>
+            </div>
+        </div>
+
+        <button class="submit-btn">suivant</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
