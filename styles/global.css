@@ -1,0 +1,14 @@
+
+/* COLORS */
+
+:root {
+    --background-color: #f4f4f4;
+    --primary-text-color: #333;
+    --secondary-text-color: #666;
+    --accent-color: #00b875;
+    --accent-hover-color: #019964;
+    --border-color: #ccc;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --heart-color: red;
+    --inactive-heart-color: #999;
+}
