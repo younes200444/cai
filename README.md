@@ -1,4 +1,4 @@
-# Projet de SYMPTOCARE
+# SYMPTOCARE
 
 ## Description du Projet
 
