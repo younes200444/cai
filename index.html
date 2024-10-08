@@ -4,34 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bouncing Ball with Sound</title>
     <style>
-        #hh {
-            position: absolute; /* Permet le positionnement aléatoire */
-            cursor: pointer; /* Change le curseur au survol */
+        body {
+            margin: 0;
+            overflow: hidden; /* Prevent scrollbars */
+            background-color: #f0f0f0;
+        }
+        #ball {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
     </style>
 </head>
 
 <body>
-    <h1 id="hh" onmouseover="moveRandomly()">la chditini aji hwini </h1>
+    <div id="ball" onclick="bounceBall()"></div>
+    <audio id="clickSound" src="click-sound.mp3" preload="auto"></audio> <!-- Add your sound file -->
+
+    <script>
+        function bounceBall() {
+            const ball = document.getElementById('ball');
+            const clickSound = document.getElementById('clickSound');
+
+            // Play sound
+            clickSound.play();
+
+            // Change color randomly
+            ball.style.backgroundColor = getRandomColor();
+
+            // Get window dimensions
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            // Generate random position
+            const randomX = Math.random() * (windowWidth - ball.offsetWidth);
+            const randomY = Math.random() * (windowHeight - ball.offsetHeight);
+
+            // Move the ball to the new position
+            ball.style.left = `${randomX}px`;
+            ball.style.top = `${randomY}px`;
+
+            // Bounce effect
+            ball.animate([
+                { transform: 'translateY(0)' },
+                { transform: 'translateY(-20px)' },
+                { transform: 'translateY(0)' }
+            ], {
+                duration: 300,
+                easing: 'ease-in-out',
+                iterations: 1
+            });
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
 </body>
 
 </html>
-
-<script>
-function moveRandomly() {
-    const title = document.getElementById('hh');
-    // Obtenir la largeur et la hauteur de la fenêtre
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-
-    // Générer des positions aléatoires
-    const randomX = Math.random() * (windowWidth - title.offsetWidth);
-    const randomY = Math.random() * (windowHeight - title.offsetHeight);
-
-    // Appliquer les nouvelles positions
-    title.style.left = `${randomX}px`;
-    title.style.top = `${randomY}px`;
-}
-</script>
