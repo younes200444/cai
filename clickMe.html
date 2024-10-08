@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Me !</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #funnyButton {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #funnyButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="funnyButton">Click Me!</button>
+    <audio id="funnySound" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
+
+    <script>
+        const button = document.getElementById('funnyButton');
+        const sound = document.getElementById('funnySound');
+
+        button.addEventListener('mouseover', () => {
+            // Play sound
+            sound.currentTime = 0; // Reset sound to start
+            sound.play();
+
+            // Change position randomly
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.position = 'absolute';
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        });
+
+        button.addEventListener('click', () => {
+            alert("You clicked me!");
+        });
+    </script>
+</body>
+
+
+
+
+</html>
