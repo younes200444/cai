@@ -33,6 +33,10 @@ header {
     justify-content: space-between;
 }
 
+header > .card {
+    width: 47%;
+}
+
 header h1 {
     font-size: 20px;
     color: var(--primary-text-color);
@@ -58,7 +62,7 @@ header h1 {
 .card {
     background-color: white;
     border-radius: 10px;
-    padding: 42px 15px;
+    padding: 15px;
     box-shadow: 0 2px 5px var(--shadow-color);
     display: flex;
     flex-direction: column;
@@ -67,10 +71,13 @@ header h1 {
     color: var(--primary-text-color);
 }
 
-.card img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
+.card i {
+    font-size: 20px;
+    color: rgb(0, 153, 0);
+   padding: 25px;
+   border-radius: 50%;
+   background-color: rgba(0, 255, 98, 0.199);
+   margin-bottom: 1.3rem;
 }
 
 .card p {
