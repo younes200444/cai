@@ -3,18 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/layout.css">
     <link rel="stylesheet" href="../styles/diagnostic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Symptômes</title>
 </head>
 <body>
 
-    <!-- Header -->
-    <div class="header">
-        <a href="#" class="back-button">←</a>
+       <!-- Header -->
+       <div class="header">
         <h1>Symptômes</h1>
+        <div class="burger-menu" onclick="toggleSidebar()">☰</div>
     </div>
 
-    <!-- Question Section -->
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <a href="./home.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a class="active" href="">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Diagnostic</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+
+    <div class="main-content">
+
+    <div class="content-center">
+           <!-- Question Section -->
     <div class="question">Où avez-vous mal ?</div>
     <div class="prompt">Veuillez sélectionner la zone où vous ressentez de la douleur ou utiliser la barre de recherche.</div>
 
@@ -140,9 +184,12 @@
         </svg>
 
     <!-- Search Bar -->
-    <div class="search-bar">
+    <div class="search-bar" style="margin-top: 30px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);">
         <input type="text" placeholder="Rechercher">
-        <i>🔍</i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    </div>
+     
     </div>
 
 </body>

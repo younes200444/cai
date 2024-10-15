@@ -1,37 +1,91 @@
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/diagnostic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/home.css">
+    <title>Accueil</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Bonjour, Mathieu</h1>
-            <div class="card">
-                <img src="https://via.placeholder.com/80" alt="Profil" class="profile-img">
-            </div>
-        </header>
-        <div class="cards">
-            <div class="card">
-                <i class="fas fa-diagnoses"></i>
-                <p>Auto-diagnostic rapide</p>
-            </div>
-            <div class="card">
-                <i class="fa-regular fa-calendar"></i>
-                <p>Prendre rendez-vous</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-clipboard-list"></i>
-                <p>Historique</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-pills"></i>
-                <p>Médicaments</p>
+
+       <!-- Header -->
+       <div class="header">
+        <h1>SYMPTOCARE</h1>
+        <div class="burger-menu" onclick="toggleSidebar()">☰</div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <a class="active" href="./home.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="./diagnostic.html">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Diagnostic</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+
+    <div class="main-content">
+        <div class="container">
+            <header>
+                <h1>Bonjour, Mathieu</h1>
+                <div class="card">
+                    <img src="../img/Ellipse 164.png" alt="Profil" class="profile-img">
+                </div>
+            </header>
+            <div class="cards">
+                <div class="card">
+                    <i class="fas fa-diagnoses"></i>
+                    <p>Auto-diagnostic rapide</p>
+                </div>
+                <div class="card">
+                    <i class="fa-regular fa-calendar"></i>
+                    <p>Prendre rendez-vous</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <p>Historique</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-pills"></i>
+                    <p>Médicaments</p>
+                </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
+
