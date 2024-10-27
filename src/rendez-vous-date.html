@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendez-vous</title>
+    <link rel="stylesheet" href="../styles/rendez-vous-date.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+     <!-- Header -->
+     <div class="header">
+        <h1>SYMPTOCARE</h1>
+        <div class="burger-menu" onclick="toggleSidebar()">☰</div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <a class="active" href="./home.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="./diagnostic.html">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Diagnostic</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+    <div class="app-container">
+        <header>
+            <h1>Rendez-vous</h1>
+        </header>
+        <div class="calendar-container">
+            <div class="month">
+                <span>Février 2025</span>
+            </div>
+            <div class="days">
+                <div>Lun</div><div>Mar</div><div>Mer</div><div>Jeu</div><div>Ven</div><div>Sam</div><div>Dim</div>
+                <div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div>
+                <div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div>
+                <div class="day">15</div><div class="day">16</div><div class="day selected">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div>
+                <div class="day">22</div><div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div>
+            </div>
+        </div>
+        <div class="time-selection">
+            <h2>Temps disponible</h2>
+            <div class="time-options">
+                <button class="time">12:00 AM</button>
+                <button class="time">02:00 PM</button>
+                <button class="time">03:00 PM</button>
+                <button class="time">04:00 PM</button>
+            </div>
+        </div>
+        <div class="reminder-selection">
+            <h2>Rappelle-moi avant</h2>
+            <div class="reminder-options">
+                <button class="reminder">20 min</button>
+                <button class="reminder">40 min</button>
+                <button class="reminder selected">25 min</button>
+                <button class="reminder">10 min</button>
+                <button class="reminder">35 min</button>
+            </div>
+        </div>
+        <div class="confirmation">
+            <button class="confirm-btn">Confirmation</button>
+        </div>
+    </div>
+
+    <!-- Modal for Confirmation -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="../img/jaime.png" alt="Thumb up" class="icon">
+                <h2>Merci !</h2>
+                <p>Rendez-vous pris avec succès</p>
+                <p>Vous avez pris rendez-vous avec le Dr Pédiatre le 17 février à 14h00.</p>
+                <button class="ok-btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/rendez-vous-date.js"></script>
+</body>
+</html>
