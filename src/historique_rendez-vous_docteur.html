@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historique</title>
+    <link rel="stylesheet" href="../styles/historique_rendez-vous_docteur.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+</head>
+<body>
+      <!-- Header -->
+      <div class="header">
+        <h1>SYMPTOCARE</h1>
+        <div class="burger-menu" onclick="toggleSidebar()">☰</div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <a class="active" href="./home.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./profile_user.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="./diagnostic.html">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Diagnostic</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+
+    <div class="app-container">
+        <header class="history-header">
+            <button class="back-btn">&larr;</button>
+            <h1>Historique</h1>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Rechercher">
+        </div>
+
+        <div class="doctor-detail">
+            <img src="../img/Doc_1.png" alt="Isabelle LEFÈVRE" class="doctor-photo">
+            <div class="doctor-info">
+                <h2>Isabelle LEFÈVRE</h2>
+                <p class="speciality">Dentist</p>
+            </div>
+            <div class="options-menu">
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+
+        <div class="appointment-history">
+            <div class="appointment-card">
+                <div class="date-badge">
+                    <span class="day">27</span>
+                    <span class="month">FEB</span>
+                </div>
+                <div class="appointment-info">
+                    <h3>rendez-vous choisi</h3>
+                    <p>Nouveau</p>
+                </div>
+            </div>
+            <div class="appointment-card">
+                <div class="date-badge">
+                    <span class="day">28</span>
+                    <span class="month">FEB</span>
+                </div>
+                <div class="appointment-info">
+                    <h3>rendez-vous choisi</h3>
+                    <p>Pour moi</p>
+                </div>
+            </div>
+            <div class="appointment-card">
+                <div class="date-badge">
+                    <span class="day">01</span>
+                    <span class="month">MAR</span>
+                </div>
+                <div class="appointment-info">
+                    <h3>rendez-vous choisi</h3>
+                    <p>Déjà</p>
+                </div>
+            </div>
+            <div class="appointment-card">
+                <div class="date-badge">
+                    <span class="day">01</span>
+                    <span class="month">MAR</span>
+                </div>
+                <div class="appointment-info">
+                    <h3>rendez-vous choisi</h3>
+                    <p>Pour mon enfant</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/historique_rendez-vous_docteur.js"></script>
+</body>
+</html>

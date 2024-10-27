@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurer votre profil</title>
+    <link rel="stylesheet" href="../styles/profile_user.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+</head>
+<body>
+     <!-- Header -->
+     <div class="header">
+        <h1>SYMPTOCARE</h1>
+        <div class="burger-menu" onclick="toggleSidebar()">☰</div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <a class="active" href="./home.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./profile_user.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="./diagnostic.html">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Diagnostic</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+    
+    <div class="app-container">
+        <header class="profile-header">
+            <button class="back-btn">&larr;</button>
+            <h1>Profile</h1>
+        </header>
+
+        <div class="profile-section">
+            <div class="profile-photo">
+                <img src="../img/Ellipse 164.png" alt="Profile Photo" id="profileImage">
+                <div class="edit-icon">
+                    <input type="file" id="uploadPhoto" style="display: none;">
+                    <label for="uploadPhoto"><i class="fa fa-camera"></i></label>
+                </div>
+            </div>
+            <h2>Configurer votre profil</h2>
+            <p>Mettez à jour votre profil pour améliorer la connexion avec votre médecin et créer une meilleure impression.</p>
+        </div>
+
+        <div class="personal-info">
+            <h3>information Personnel</h3>
+            <div class="info-item">
+                <label for="name">Nom et Prénom</label>
+                <input type="text" id="name" placeholder="Nom et Prénom">
+                <i class="fa fa-pencil"></i>
+            </div>
+            <div class="info-item">
+                <label for="contact">Contact</label>
+                <input type="text" id="contact" placeholder="Contact">
+                <i class="fa fa-pencil"></i>
+            </div>
+            <div class="info-item">
+                <label for="birthdate">naissance</label>
+                <input type="date" id="birthdate">
+                <i class="fa fa-pencil"></i>
+            </div>
+            <div class="info-item">
+                <label for="address">adresse</label>
+                <input type="text" id="address" placeholder="Add Details">
+                <i class="fa fa-pencil"></i>
+            </div>
+        </div>
+
+        <button class="continue-btn">Continue</button>
+    </div>
+
+    <script src="../js/profile_user.js"></script>
+</body>
+</html>

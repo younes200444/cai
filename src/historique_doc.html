@@ -1,65 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-    
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor List</title>
+    <title>Historique</title>
     <link rel="stylesheet" href="../styles/historique_doc.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/layout.css">
 </head>
-
 <body>
-    <div class="container">
-        <header>
+     <!-- Header -->
+     <div class="header">
+        <h1>SYMPTOCARE</h1>
+        <div class="burger-menu" onclick="toggleSidebar()">☰</div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <a class="active" href="./home.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./profile_user.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="./diagnostic.html">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Diagnostic</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+    
+    <div class="app-container">
+        <header class="history-header">
+            <button class="back-btn">&larr;</button>
             <h1>Historique</h1>
-            <div class="search-bar">
-                <input type="text" placeholder="Rechercher">
-                <button class="search-button"> <i class="fa-solid fa-magnifying-glass"></i> </button>
-            </div>
         </header>
-        
-        <div class="doctor-list">
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Rechercher">
+        </div>
+
+        <div class="doctor-list" id="doctorList">
             <div class="doctor-card">
-                <img src="../img/Doc_1.png" alt="Doctor Sophie Durand">
+                <img src="../img/Doc_1.png" alt="Sophie Durand">
                 <div class="doctor-info">
                     <h2>Sophie DURAND</h2>
                     <p>Dentist</p>
                 </div>
             </div>
             <div class="doctor-card">
-                <img src="../img/doc.png" alt="Doctor Isabelle Lefèvre">
+                <img src="../img/DOC.png" alt="Isabelle LEFÈVRE">
                 <div class="doctor-info">
                     <h2>Isabelle LEFÈVRE</h2>
-                    <p>Dentiste</p>
+                    <p>Dentist</p>
                 </div>
             </div>
             <div class="doctor-card">
-                <img src="../img/Doc_3.png" alt="Doctor Shruti Kedia">
+                <img src="../img/Doc_4.png" alt="Dr. Shruti Kedia">
                 <div class="doctor-info">
                     <h2>Dr. Shruti Kedia</h2>
-                    <p>Specialist Cardiologist</p>
+                    <p>Specialist cardiologist</p>
                 </div>
             </div>
             <div class="doctor-card">
-                <img src="../img/Doc_4.png" alt="Doctor Juliette Lasar">
+                <img src="../img/Doc_3.png" alt="Dr. Juliette LASAR">
                 <div class="doctor-info">
                     <h2>Dr. Juliette LASAR</h2>
-                    <p>Généraliste</p>
+                    <p>Gynecologist</p>
                 </div>
             </div>
         </div>
-
-        <footer>
-            <nav>
-                <button class="nav-button"> <i class="fa-solid fa-user-doctor"></i>    </button>
-                <button class="nav-button"> <i class="fa-solid fa-pills"></i>          </button>
-                <button class="nav-button"> <i class="fa-solid fa-child-reaching"></i> </button>
-            </nav>
-        </footer>
     </div>
+
+    <script src="../js/historique_doc.js"></script>
 </body>
 </html>
+
+                   

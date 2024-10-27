@@ -48,33 +48,84 @@ body {
     color: #333;
 }
 
-.doctor-list {
-    margin-top: 20px;
-}
-
-.doctor-card {
+.doctor-detail {
     display: flex;
     align-items: center;
     background-color: #fff;
     border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
+    padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-.doctor-card img {
+.doctor-photo {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     margin-right: 15px;
 }
 
+.doctor-info {
+    flex: 1;
+}
+
 .doctor-info h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.doctor-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #4CAF50;
+}
+
+.options-menu {
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+}
+
+.appointment-history {
+    margin-top: 20px;
+}
+
+.appointment-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-badge {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    width: 50px;
+    margin-right: 15px;
+}
+
+.date-badge .day {
+    font-size: 18px;
+}
+
+.date-badge .month {
+    font-size: 12px;
+}
+
+.appointment-info h3 {
     margin: 0;
     font-size: 16px;
 }
 
-.doctor-info p {
+.appointment-info p {
+    margin: 5px 0 0;
     font-size: 14px;
-    color: #666;
+    color: #4CAF50;
 }
