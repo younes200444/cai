@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButtons = document.querySelectorAll(".toggle-button");
 
+  //Changer le view (front/back) du anatomy
   toggleButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       toggleButtons.forEach((b) => {
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchBar = document.getElementById("searchBar");
   const detectionMarker = document.querySelector(".detection-marker");
 
+  //Toggle slideup
   const slideUp = () => {
     popup.classList.add("slide-up");
     detectionMarker.classList.remove("hide")

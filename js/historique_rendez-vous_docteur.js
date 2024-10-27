@@ -3,6 +3,7 @@ document.querySelector('.back-btn').addEventListener('click', function() {
     window.history.back(); 
 });
 
+//Filter les docteurs par recherche
 document.getElementById('searchInput').addEventListener('keyup', function() {
     let searchQuery = this.value.toLowerCase();
     let appointmentCards = document.querySelectorAll('.appointment-card');

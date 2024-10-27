@@ -3,6 +3,7 @@
 
     const btns = document.querySelectorAll(".questions button");
 
+    //Toggle les Buttons yes/no
     btns.forEach(btn => {
         btn.addEventListener("click", (event) => {
             if(btn.classList.contains("active")){
