@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historique</title>
+    <link rel="stylesheet" href="../styles/liste_medicament.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+     <!-- Header -->
+     <div class="header">
+        <h1>Docteur</h1>
+        <div class="burger-menu" onclick="toggleSidebar()">☰</div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <a class="active" href="../index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./profile_user.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="./diagnostic.html">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Diagnostic</span>
+                </a>
+            </li>
+            <li>
+                <a href="./medicaments.html">
+                    <i class="fa-solid fa-capsules"></i>
+                    <span>Médicaments</span>
+                </a>
+            </li>
+            <li>
+                <a href="./historique_doc.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Historique</span>
+                </a>
+            </li>
+            <li>
+                <a href="./home.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+
+<div class="app-container">
+    <header class="medications-header">
+        <button class="back-btn">&larr;</button>
+        <h1>Médicaments</h1>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Rechercher">
+    </div>
+
+    <h2 class="section-title">ordre des médicaments</h2>
+
+    <div class="medication-list" id="medicationList">
+        <div class="medication-card">
+            <img src="../img/dl.png" alt="Doliprane 1000mg" class="medication-photo">
+            <div class="medication-info">
+                <h2>Doliprane 1000mg</h2>
+                <p class="medication-subtitle">Paracétamol</p>
+            </div>
+            <div class="options-menu">
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+
+        <div class="medication-card">
+            <img src="../img/Nurofen.jpg" alt="Nurofen" class="medication-photo">
+            <div class="medication-info">
+                <h2>Nurofen</h2>
+                <p class="medication-subtitle">Ibuprofène</p>
+            </div>
+            <div class="options-menu">
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+
+        <div class="medication-card">
+            <img src="../img/clamoxyl.png" alt="Clamoxyl" class="medication-photo">
+            <div class="medication-info">
+                <h2>Clamoxyl</h2>
+                <p class="medication-subtitle">Amoxicilline</p>
+            </div>
+            <div class="options-menu">
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+    </div>
+
+    <button class="floating-btn">
+        <i class="fas fa-plus"></i>
+    </button>
+</div>
+
+    <script src="../js/liste_medicament.js"></script>
+</body>
+</html>

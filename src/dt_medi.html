@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Médicaments</title>
+    <link rel="stylesheet" href="../styles/dt_medi.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+     <!-- Header -->
+     <div class="header">
+        <h1>Rendez-vous</h1>
+        <div class="burger-menu" onclick="toggleSidebar()">☰</div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <a class="active" href="../index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./profile_user.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="./diagnostic.html">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Diagnostic</span>
+                </a>
+            </li>
+            <li>
+                <a href="./medicaments.html">
+                    <i class="fa-solid fa-capsules"></i>
+                    <span>Médicaments</span>
+                </a>
+            </li>
+            <li>
+                <a href="./historique_doc.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Historique</span>
+                </a>
+            </li>
+            <li>
+                <a href="./home.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+    <div class="app-container">
+        <header class="medications-header">
+            <button class="back-btn">&larr;</button>
+            <h1>Médicaments</h1>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Rechercher">
+        </div>
+
+        <div class="medication-detail">
+            <div class="medication-header">
+                <img src="../img/dl.png" alt="Doliprane" class="medication-photo">
+                <div class="medication-info">
+                    <h2>Doliprane 1000mg</h2>
+                    <p class="medication-subtitle">Paracétamol</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Caractéristiques</h2>
+            <div class="medication-characteristics">
+                <h3>1. Dénomination du médicament</h3>
+                <p>DOLIPRANE 1000 mg, comprimés</p>
+
+                <h3>2. Composition qualitative et quantitative</h3>
+                <p>Paracétamol 1000 mg par comprimé.</p>
+
+                <h3>3. Forme pharmaceutique</h3>
+                <p>Comprimés.</p>
+
+                <h3>4. Données cliniques</h3>
+                <h4>4.1 Indications thérapeutiques</h4>
+                <p>
+                    DOLIPRANE est indiqué pour le traitement des douleurs légères à modérées et/ou de la fièvre.
+                    Utilisé chez les adultes et les enfants pesant plus de 50 kg.
+                </p>
+
+                <h4>4.2 Posologie et mode d'administration</h4>
+                <p>
+                    Chez l'adulte et l'enfant pesant plus de 50 kg : 1 comprimé de 1000 mg par prise,
+                    à renouveler toutes les 6 heures si nécessaire sans dépasser 3 g par jour.
+                </p>
+
+                <h4>4.3 Contre-indications</h4>
+                <p>
+                    Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la section 6.1.
+                </p>
+
+                <h4>4.4 Mises en garde spéciales et précautions d'emploi</h4>
+                <p>
+                    Une surveillance est nécessaire chez les patients présentant une insuffisance hépatique légère
+                    à modérée ou une insuffisance rénale grave.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/dt_medi.js"></script>
+</body>
+</html>
