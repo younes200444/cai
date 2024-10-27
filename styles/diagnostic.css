@@ -1,101 +1,219 @@
-
-
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #e8f5e9, #ffffff);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #333;
 }
-.content-center{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .back-button {
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
-    margin-right: 10px;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+  margin-right: 10px;
 }
 
 .header h1 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 /* Main Content */
 .question {
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .prompt {
-    font-size: 14px;
-    text-align: center;
-    color: #666;
-    margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 /* Toggle Buttons */
 .toggle-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .toggle-button {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #f0f0f0;
-    color: #333;
-    transition: all 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: all 0.3s ease;
 }
 
 .toggle-button.active {
-    background-color: #4caf50;
-    color: #fff;
+  background-color: #4caf50;
+  color: #fff;
 }
 
 /* Human Body Image */
 .body-image {
-    width: 200px;
-    height: auto;
-    margin-bottom: 20px;
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.anatomy{
+    transition: .3s all;
+}
+.anatomy.scale{
+    transform: scale(1.5);
+    transform-origin: top;
 }
 
 /* Search Bar */
 .search-bar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #f9f9f9;
-    border-radius: 30px;
-    padding: 10px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    margin-top: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
 }
 
 .search-bar input {
-    flex-grow: 1;
-    border: none;
-    outline: none;
-    background: none;
-    padding: 5px 10px;
-    font-size: 16px;
-    color: #666;
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #666;
 }
 
 .search-bar i {
-    font-size: 18px;
-    color: #888;
-    margin-left: 10px;
+  font-size: 18px;
+  color: #888;
+  margin-left: 10px;
 }
+.popup-container .search-bar {
+  box-shadow: none;
+  margin-bottom: 8px;
+}
+/* Conteneur de la popup */
+.popup-container {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.popup-container.slide-up {
+  animation: slideUp 0.3s ease-out forwards; /* Animation rule */
+}
+
+/* Animation keyframes */
+@keyframes slideUp {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+/* Barre de glissement */
+.popup-handle {
+  width: 40px;
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 2px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+/* Titre de la zone */
+.popup-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Sous-titre de sélection de zone */
+.popup-subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Liste des sous-zones */
+.zone-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.zone-list li {
+  padding: 12px 0;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.zone-list li:hover {
+  background-color: #f9f9f9;
+}
+
+/* Flèche vers la droite */
+.arrow-right {
+  font-size: 18px;
+  color: #ccc;
+}
+/* Container for the detection marker */
+.detection-marker {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-56%);
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    background-color: rgba(200, 0, 0, 0.4); /* Outer circle color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.detection-marker.hide {
+    display: none;
+  }
+  
+  /* Inner circle */
+  .inner-circle {
+    width: 15px; /* Adjust size as needed */
+    height: 15px;
+    background-color: rgba(255, 0, 0, 1); /* Inner circle color */
+    border-radius: 50%;
+  }
+  

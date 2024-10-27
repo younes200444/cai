@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/more_info_diagnostic.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Plus d'informations</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <h1>Symptômes</h1>
+      <div class="burger-menu" onclick="toggleSidebar()">☰</div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li>
+          <a href="./home.html">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a class="active" href="">
+            <i class="fa-solid fa-stethoscope"></i>
+            <span>Diagnostic</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Déconnexion</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("open");
+      }
+    </script>
+
+    <div class="main-content">
+      <div class="content-center">
+        <h2 class="question" style="margin-bottom: 1.5rem;">Plus d'informations</h2>
+        <p class="prompt" style="text-align: center;line-height: 20px;">
+            Nous avons besoin de quelques informations supplémentaires pour mieux comprendre ce qui ne va pas.
+        </p>
+        <div class="questions">
+            <div class="row">
+                <div class="col-left">
+                    <h3>Avez-vous de
+                        la fièvre ?</h3>
+                </div>
+                <div class="col-right">
+                    <button class="yes">Oui</button>
+                    <button class="no">Non</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-left">
+                    <h3>Avez-vous  des 
+                        vomissements ?</h3>
+                </div>
+                <div class="col-right">
+                    <button class="yes">Oui</button>
+                    <button class="no">Non</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-left">
+                    <h3>Avez-vous des 
+                        troubles visuels ?</h3>
+                </div>
+                <div class="col-right">
+                    <button class="yes">Oui</button>
+                    <button class="no">Non</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-left">
+                    <h3>La douleur est-elle 
+                        récurrente ?</h3>
+                </div>
+                <div class="col-right">
+                    <button class="yes">Oui</button>
+                    <button class="no">Non</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-left">
+                    <h3>Depuis quand 
+                        avez-vous mal ?</h3>
+                </div>
+                <div class="col-right">
+                    <input type="datetime-local" id="date-picker" style="border: none; padding: 5px; font-size: 1rem;">
+                </div>
+            </div>
+        </div>
+      </div>
+      <i id="next" class="fa-solid fa-arrow-right"></i>
+    </div>
+    <script src="../js/more_info_diagnostic.js"></script>
+  </body>
+</html>
