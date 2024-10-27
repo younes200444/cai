@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   zoneListItems.forEach(item => {
     item.addEventListener("click", (event) => {
-      window.location.href = 'http://127.0.0.1:5500/src/home.html'
+      window.location.href = 'http://127.0.0.1:5500/src/plus_info_diagnostic.html'
     })
 
   })

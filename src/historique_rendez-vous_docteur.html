@@ -10,7 +10,7 @@
 <body>
       <!-- Header -->
       <div class="header">
-        <h1>SYMPTOCARE</h1>
+        <h1>Historique</h1>
         <div class="burger-menu" onclick="toggleSidebar()">☰</div>
     </div>
 
@@ -19,7 +19,7 @@
         <h2>Menu</h2>
         <ul>
             <li>
-                <a class="active" href="./home.html">
+                <a class="active" href="../index.html">
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
@@ -37,7 +37,19 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./medicaments.html">
+                    <i class="fa-solid fa-capsules"></i>
+                    <span>Médicaments</span>
+                </a>
+            </li>
+            <li>
+                <a href="./historique_doc.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Historique</span>
+                </a>
+            </li>
+            <li>
+                <a href="./home.html">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Déconnexion</span>
                 </a>
@@ -52,11 +64,7 @@
     </script>
 
     <div class="app-container">
-        <header class="history-header">
-            <button class="back-btn">&larr;</button>
-            <h1>Historique</h1>
-        </header>
-
+        <i id="backBtn" style="position: absolute;top: 13%;left: 20px;font-size: 20px;" class="fa-solid fa-arrow-left"></i>
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Rechercher">
         </div>
@@ -115,7 +123,11 @@
             </div>
         </div>
     </div>
-
+    <script>
+        document.getElementById("backBtn").addEventListener("click", () => {
+            history.back(); 
+        })
+    </script>
     <script src="../js/historique_rendez-vous_docteur.js"></script>
 </body>
 </html>

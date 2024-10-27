@@ -17,7 +17,7 @@
   <body>
     <!-- Header -->
     <div class="header">
-      <h1>Symptômes</h1>
+      <h1>Diagnostic</h1>
       <div class="burger-menu" onclick="toggleSidebar()">☰</div>
     </div>
 
@@ -26,13 +26,13 @@
         <h2>Menu</h2>
         <ul>
             <li>
-                <a href="./home.html">
+                <a href="../index.html">
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./profile_user.html">
                     <i class="fa-solid fa-user"></i>
                     <span>Profile</span>
                 </a>
@@ -44,7 +44,19 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./medicaments.html">
+                    <i class="fa-solid fa-capsules"></i>
+                    <span>Médicaments</span>
+                </a>
+            </li>
+            <li>
+                <a href="./historique_doc.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Historique</span>
+                </a>
+            </li>
+            <li>
+                <a href="./home.html">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Déconnexion</span>
                 </a>
@@ -59,6 +71,7 @@
     </script>
 
     <div class="main-content">
+        <i id="backBtn" style="position: absolute;top: 13%;left: 20px;font-size: 20px;" class="fa-solid fa-arrow-left"></i>
       <div class="content-center">
         <!-- Question Section -->
         <div class="question">Où avez-vous mal ?</div>
@@ -570,6 +583,11 @@
         </ul>
       </div>
     </div>
+    <script>
+        document.getElementById("backBtn").addEventListener("click", () => {
+            history.back(); 
+        })
+    </script>
     <script src="../js/diagnostic.js"></script>
   </body>
 </html>

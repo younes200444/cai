@@ -18,7 +18,7 @@
   <body>
     <!-- Header -->
     <div class="header">
-      <h1></h1>
+      <h1>Diagnostic</h1>
       <div class="burger-menu" onclick="toggleSidebar()">☰</div>
     </div>
 
@@ -27,28 +27,40 @@
       <h2>Menu</h2>
       <ul>
         <li>
-          <a href="./home.html">
+          <a href="../index.html">
             <i class="fas fa-home"></i>
             <span>Home</span>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="./profile.html">
             <i class="fa-solid fa-user"></i>
             <span>Profile</span>
           </a>
         </li>
         <li>
-          <a class="active" href="">
-            <i class="fa-solid fa-stethoscope"></i>
-            <span>Diagnostic</span>
-          </a>
+            <a class="active" href="">
+                <i class="fa-solid fa-stethoscope"></i>
+                <span>Diagnostic</span>
+            </a>
         </li>
         <li>
-          <a href="">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <span>Déconnexion</span>
-          </a>
+            <a href="./medicaments.html">
+                <i class="fa-solid fa-capsules"></i>
+                <span>Médicaments</span>
+            </a>
+        </li>
+        <li>
+            <a href="./historique_doc.html">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Historique</span>
+            </a>
+        </li>
+        <li>
+            <a href="./home.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Déconnexion</span>
+            </a>
         </li>
       </ul>
     </div>
@@ -74,8 +86,32 @@
         <p class="desc">
             La migraine est un type de mal de tête intense et récurrent, souvent accompagné de symptômes tels que des nausées, des vomissements et une sensibilité accrue à la lumière et au bruit. Les douleurs, généralement localisées d'un côté de la tête, peuvent durer de quelques heures à plusieurs jours.
         </p>
+        <section class="specialistes-container">
+            <h3 style="margin-top: 3rem;margin-bottom: 2rem;">Spécialistes recommandées</h2>
+            <div class="cards">
+              <!-- Carte 1 -->
+              <div class="card">
+                <a href="./reserve.html" style="text-decoration: none;">
+                    <img src="../img/Doc_5.png" alt="Claire DUPONT">
+                    <h3>Claire DUPONT</h3>
+                    <p>Neurologue</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </a>
+              </div>
+              <!-- Carte 2 -->
+              <div class="card">
+                <a href="./reserve.html" style="text-decoration: none;">
+                    <img src="../img/Doc_3.png" alt="Sophie DURAND">
+                    <h3>Sophie DURAND</h3>
+                    <p>Médecin généraliste</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </a>
+              </div>
+            </div>
+          </section>
       </div>
     </div>
-    <script src="../js/more_info_diagnostic.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/result.js"></script>
   </body>
 </html>

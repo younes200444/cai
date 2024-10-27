@@ -6,11 +6,18 @@
     <title>Rendez-vous</title>
     <link rel="stylesheet" href="../styles/reserve.css">
     <link rel="stylesheet" href="../styles/layout.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
       <!-- Header -->
       <div class="header">
-        <h1>SYMPTOCARE</h1>
+        <h1>Rendez-vous</h1>
         <div class="burger-menu" onclick="toggleSidebar()">☰</div>
     </div>
 
@@ -19,7 +26,7 @@
         <h2>Menu</h2>
         <ul>
             <li>
-                <a class="active" href="./home.html">
+                <a class="" href="../index.html">
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
@@ -36,7 +43,19 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./medicaments.html">
+                    <i class="fa-solid fa-capsules"></i>
+                    <span>Médicaments</span>
+                </a>
+            </li>
+            <li>
+                <a href="./historique_doc.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Historique</span>
+                </a>
+            </li>
+            <li>
+                <a href="./home.html">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Déconnexion</span>
                 </a>
@@ -50,12 +69,8 @@
         }
     </script>
     <div class="container">
-        <header>
-            <div class="header-bar">
-                <span class="back-arrow" onclick="history.back()">&#8592;</span>
-                <h1>Rendez-vous</h1>
-            </div>
-        </header>
+        <i id="backBtn" style="position: absolute;top: 13%;left: 20px;font-size: 20px;" class="fa-solid fa-arrow-left"></i>
+
         <div class="doctor-card">
             <img src="../img/doc.png" alt="Dr. Pediatrician">
             <div class="doctor-info">
@@ -91,7 +106,11 @@
 
         <button class="submit-btn">suivant</button>
     </div>
-
+    <script>
+        document.getElementById("backBtn").addEventListener("click", () => {
+            history.back(); 
+        })
+    </script>
     <script src="../js/reserve.js"></script>
 </body>
 </html>

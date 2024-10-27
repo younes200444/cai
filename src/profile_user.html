@@ -6,11 +6,18 @@
     <title>Configurer votre profil</title>
     <link rel="stylesheet" href="../styles/profile_user.css">
     <link rel="stylesheet" href="../styles/layout.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
      <!-- Header -->
      <div class="header">
-        <h1>SYMPTOCARE</h1>
+        <h1>Profile</h1>
         <div class="burger-menu" onclick="toggleSidebar()">☰</div>
     </div>
 
@@ -19,13 +26,13 @@
         <h2>Menu</h2>
         <ul>
             <li>
-                <a class="active" href="./home.html">
+                <a class="" href="../index.html">
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="./profile_user.html">
+                <a class="active" href="./profile_user.html">
                     <i class="fa-solid fa-user"></i>
                     <span>Profile</span>
                 </a>
@@ -37,7 +44,19 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./medicaments.html">
+                    <i class="fa-solid fa-capsules"></i>
+                    <span>Médicaments</span>
+                </a>
+            </li>
+            <li>
+                <a href="./historique_doc.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <span>Historique</span>
+                </a>
+            </li>
+            <li>
+                <a href="./home.html">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Déconnexion</span>
                 </a>
@@ -51,12 +70,8 @@
         }
     </script>
     
-    <div class="app-container">
-        <header class="profile-header">
-            <button class="back-btn">&larr;</button>
-            <h1>Profile</h1>
-        </header>
-
+    <div class="app-container" style="margin-top: 5rem;">
+        <i id="backBtn" style="position: absolute;top: 13%;left: 20px;font-size: 20px;" class="fa-solid fa-arrow-left"></i>
         <div class="profile-section">
             <div class="profile-photo">
                 <img src="../img/Ellipse 164.png" alt="Profile Photo" id="profileImage">
@@ -95,7 +110,11 @@
 
         <button class="continue-btn">Continue</button>
     </div>
-
+    <script>
+        document.getElementById("backBtn").addEventListener("click", () => {
+            history.back(); 
+        })
+    </script>
     <script src="../js/profile_user.js"></script>
 </body>
 </html>
