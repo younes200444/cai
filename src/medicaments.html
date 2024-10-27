@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/medics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Symptômes</title>
+</head>
+<body>
+
+       <!-- Header -->
+       <div class="header">
+        <h1>Medicaments</h1>
+        <div class="burger-menu" onclick="toggleSidebar()">☰</div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <a href="./home.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a class="active" href="">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Diagnostic</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+
+    <div class="main-content">
+
+    <div class="content-center">
+    
+     <!-- Body Image Placeholder -->
+    <section>
+        <div class="medics-container">
+            <img src="../img/medical-prescription.png" alt="">
+        </div>
+    </section>
+
+     
+ 
+    <!-- title  -->
+    <div class="title-medicaments">
+        <h4></h4>
+    </div>
+
+    <div class="question">pas de medicament pour le moment</div>
+    <div class="prompt">ajouter votre premier medicament !</div>
+
+    <div class="button-section"><button class="btn-ajouter-medicaments">Ajouter médicaments</button>
+    </div>
+    
+    </div>
+     
+    </div>
+    <script src="../js/diagnostic.js"></script>
+</body>
+</html>
